@@ -320,6 +320,7 @@ def update_dashboard(regions, tariffs, ages, incomes, segments):
 )
 def reset_filters(n_clicks):
     return None, None, None, None, None
+server = app.server  # нужно для gunicorn
 
 if __name__ == '__main__':
     app.run(debug=False, port=8051)
